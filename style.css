@@ -1,0 +1,132 @@
+*{
+			box-sizing: border-box;
+			font-family: roboto;
+		}
+		body{
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		::-webkit-scrollbar {
+ 			 width: 7px;
+		}
+
+		::-webkit-scrollbar-track {
+			  box-shadow: inset 0 0 5px grey; 
+  			  border-radius: 6px;
+		}
+ 
+
+		::-webkit-scrollbar-thumb {
+		  background: silver; 
+		  border-radius: 10px;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+		  border:1px solid grey ; 
+		}
+		#main{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			background-color:#F4F3F8;
+		}
+		#main > div{
+			background-color: #F4F3F8;
+  			margin: 10px 2px;
+  			padding: 20px;
+  			border-right: 0.1px solid white;
+		}
+		#contacts-side input{
+			width:80%;
+			border-radius: 5px;
+			background-color: #E6E5EA;
+			border: 0;
+			padding:12px;
+			outline: thin;
+			font-weight: lighter;
+			font-size: 12px;
+		}
+		#contacts-side input:focus{
+			border:2px solid blue;
+		}
+		#contacts{ 
+			margin-top: 20px;
+			width:80%;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			max-height: 500px;
+			overflow-y: auto;
+			border-width: thin;
+			 box-shadow: 2px 2px 2px white;
+		}
+		.contact{
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			border-bottom: 1px solid #E3E4E0;
+			padding:5px;
+			border-radius: 5px;
+		}
+		.contact:hover{
+			box-shadow: 30px 0px 30px rgba(0,0,0,.4);
+			cursor: pointer;
+			background-color: white;
+		}
+		.contact img{
+			width: 50px;
+			height: 50px;
+			margin-right: 40px;
+			border-radius: 50%;
+		}
+		.res-chat{
+			width:40%;
+			background-color: white;
+			padding:4px;
+			margin:10px;
+			border-radius: 8px;
+		}
+		.res-chat sup {
+			font-size: 10px;
+			text-align:center
+		}
+		.rev-chat{
+			width:40%;
+			background-color: #4664FF;
+			padding:6px;
+			margin:10px;
+			float: right;
+			border-radius: 8px;
+			color:white;
+			font-size: 16px;
+		}
+		.rev-chat sup{
+			font-size: 10px;
+			text-align:center
+		}
+		#input{
+			background-image: url('download.jpg');
+			background-position:10px;
+			background-repeat: no-repeat;
+			background-size: 30px;
+			width: 44%;
+			padding:15px 60px;
+			position: fixed;
+			bottom:15px;
+			background-color: #E6E5EA;
+			border:0;
+			border-radius: 8px;	
+		}
+		#files{
+			background-color: white;
+			width:80%;
+			padding:20px;
+			margin:auto;
+			border-top: 1px solid #E3E4E0;
+			cursor: pointer;
+			display: block;
+			transition: display 2s
+		}

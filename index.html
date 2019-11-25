@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en-US">
+	<title>Artboard</title>
+	<meta charset="utf-8">
+	<meta name='description' content="Squareboat Challenge">
+	<meta name='author' content="Saksham Manocha">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" href="favicon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+		<div id='main'>
+			<div id='contacts-side' style="flex-grow: 1.5;width: 20%">
+				<section style='background-color: white;padding:7px 7px 7px 0px;width:80%;border-radius: 10px;cursor: pointer;'>
+					<span style="border-right:1px solid #E3E4E0;padding: 5px;margin: 0px 10px;color: blue;font-size: 20px;">&plus;</span>New Conversation
+				</section>
+				<section>
+					<div>
+						<h1 style="font-size: 30px;">Chats<span style='float: right;margin-right: 80px;'>...</span></h1>
+						<input type="text" name="search" placeholder="Search Here" id='filter' onkeyup="filter()">
+					</div>
+				</section>
+				<div id='contacts'>
+					<div class='contact' onclick="info(this)">
+						<img src="images/p1.jpg">
+						<p>Tim Hover</p>
+					</div>
+					<div class='contact' onclick="info(this)">
+						<img src="images/p2.jpg">
+						<p>Marian Zuch</p>
+					</div>
+					<div class='contact' onclick="info(this)">
+						<img src="images/p7.jpg">
+						<p>Maria</p>
+					</div>
+					<div class='contact' onclick="info(this)">
+						<img src="images/p4.jpg">
+						<p>John Oliver</p>
+					</div>
+					<div class='contact' onclick="info(this)">
+						<img src="images/p5.jpg">
+						<p style="text-align: left">Fergi</p>
+					</div>
+					<div class='contact' onclick="info(this)">
+						<img src="images/p6.jpg">
+						<p>Josh Trevor</p>
+					</div>
+					<div class='contact' onclick="info(this)">
+						<img src="images/p3.jpg">
+						<p>Noah</p>
+					</div>
+					<div class='contact' onclick="info(this)">
+						<img src="images/p8.jpg">
+						<p>Windy</p>
+					</div>
+					<div class='contact' style="visibility: hidden;">
+						<img src="images/p4.jpg">
+						<p>John 2</p>
+					</div>
+				</div>
+			</div>
+			<div id='chat-side' style="flex-grow: 4;width:35%;overflow-y:auto;">
+				<section>
+					<div style="display: flex;flex-direction: row">
+						<img src='images/p7.jpg' style="width: 50px;height: 50px;margin-right: 20px;border-radius: 50%;" id='chat_img'>
+						<p id='chat-name'>Maria</p>
+					</div>
+				</section>
+				<br>
+				<div class='res-chat'><p>How you doin?!!</p><sup>20 mins ago</sup></div>
+				<div class='rev-chat'><p>Could You BE any more flirty?</p><sup>Seen</sup></div>
+				<br>
+				<div class='res-chat'><p>Oh Come On, You're my lobster!!</p><sup>7 mins ago</sup></div>
+				<div class='rev-chat'><p>I like to think so..</p><sup>Seen</sup></div>
+				<br>
+				<br>
+				<div class='res-chat'><p>I KNOW!!!!!</p><sup>now</sup></div>
+				<br>
+				<div class='rev-chat' id='new' style='display:none;'></div>		
+				<input type="text" name="message" placeholder=" Type Your Message Here !!" id='input' onkeydown="func(this)">
+			</div>
+			
+			<div id='info-side' style="flex-grow: 1;width:20%;overflow-y:auto;height: 670px;">
+				<div style="border:2px solid white;padding:15px;width:80%;margin:5px auto;background-color: white;text-align: center;border-radius: 9px;">
+					<img src='images/p7.jpg' style="width: 60px;height: 60px;border-radius: 50%;" id='info-img'>
+					<h2 id='info-name'>Maria</h2>
+					<p style="color: #C8C8CA" id='info-content'>Fashion Designer and Social Activist</p>
+				</div>
+				
+				<div>
+				<div style="background-color: white;width:80%;padding:20px;margin:auto;cursor: pointer;" onclick="toggleInfo()">
+					Information<span style='float:right'>&#9660;</span>
+				</div>
+				<div id='info' style="background-color: white;width:80%;padding:20px;margin:auto;cursor: pointer;border-top: 1px solid #E3E4E0;display: none;text-align: justify-all;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor consequat.</div>
+				</div>
+
+				<div style="background-color: white;width:80%;padding:20px;margin:10px auto;cursor: pointer;">
+					Images(20)<span style='float:right'>&#9660;</span>
+				</div>
+				
+				<div>
+				<div style="background-color: white;width:80%;padding:20px;margin:auto;cursor: pointer;" id='hide' onclick='toggle()'>
+					Files<span style='float:right'>&#9650;</span>
+				</div>
+				<div id='files'>
+					<ul style='list-style-type: none;width: 100%;margin: 3px;padding: 5px;'>
+						<li><i class="fa fa-download" style="color:blue;margin-right: 10px;"></i><span>Landing_Page.zip</span></li>
+						<li><i class="fa fa-download" style="color:blue;margin-right: 10px;"></i><span>Requirements</span></li>
+						<li><i class="fa fa-download" style="color:blue;margin-right: 10px;"></i><span>img.jpg</span></li>
+					</ul>
+				</div>
+			</div>
+			
+				<div style="background-color: white;width:80%;padding:20px;margin:10px auto;cursor: pointer;">
+					Pinned Items<span style='float:right'>&#9660;</span>
+				</div>
+			</div>
+			<br>
+		</div>
+<script src='main.js'></script>		
+</body>
+</html>
